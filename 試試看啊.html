@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.a1{text-align:center;font-size: 250%;;margin-top:0;}
+.a2{height:740px;background-color:rgb(240,202,201);background-image: linear-gradient(rgb(247,202,201), rgb(146,168,209));}
+#aa{font-size: 180%;}
+#bb{font-size: 100%;}
+#a2{font-size: 180%;}
+#a3{font-size: 100%;}
+#a4{font-size: 100%;}
+#a5{font-size: 100%;}
+#a6{font-size: 100%;}
+#a7{font-size: 100%;}
+#a8{font-size: 100%;}
+#a9{font-size: 100%;}
+#a10{font-size: 100%;}
+#a11{font-size: 100%;}
+#a12{font-size: 180%;}
+#a13{font-size: 100%;}
+#content1{font-size: 180%;}
+#content2{font-size: 180%;}
+#content3{font-size: 180%;}
+#content4{font-size: 180%;}
+#content5{font-size: 180%;}
+
+</style>
+</head>
+<body>
+	<div class="a2">
+
+	<h1 class="a1">~問卷調查(◉３◉)~</h1>
+	<form id="aa">請輸入你的姓名：<input type="text" id="name"></form><br>
+	<button id="bb" type="button" onclick="myFunc();document.getElementById('a2').style.display='block';
+													document.getElementById('a3').style.display='block';
+													document.getElementById('a4').style.display='block';">輸入</button>
+
+	<p id="a2" style="display:none">平時有在關注韓國明星嗎?</p>
+	<button id="a3" style="display:none" onclick="display1();document.getElementById('a2').style.display='none';
+														     document.getElementById('a3').style.display='none';
+												 		     document.getElementById('a4').style.display='none';
+												 		     document.getElementById('a5').style.display='block';
+												 			 document.getElementById('a6').style.display='block';
+															 document.getElementById('a7').style.display='block';">有啊有啊!</button><br>
+	<button id="a4" style="display:none" onclick="display2();document.getElementById('a2').style.display='none';
+														     document.getElementById('a3').style.display='none';
+												 		     document.getElementById('a4').style.display='none';
+												 		     document.getElementById('a8').style.display='block';">沒有欸...</button>
+
+	<!--有啊有啊!-->
+	<p id="content1" style="display:none">那麼平時有聽說過SEVENTEEN這個團體嗎?</p>
+	<button id="a5" style="display:none" onclick="display3();document.getElementById('content1').style.display='none';
+															 document.getElementById('a5').style.display='none';
+															 document.getElementById('a6').style.display='none';
+															 document.getElementById('a7').style.display='none';
+															 document.getElementById('a9').style.display='block';">有啊!我也是粉絲呢!!</button><br>
+	<button id="a6" style="display:none" onclick="display4();document.getElementById('content1').style.display='none';
+															 document.getElementById('a5').style.display='none';
+															 document.getElementById('a6').style.display='none';
+															 document.getElementById('a7').style.display='none';
+															 document.getElementById('a10').style.display='block';">有聽說過，但是沒有關注</button><br>
+	<button id="a7" style="display:none" onclick="display5();document.getElementById('content1').style.display='none';
+															 document.getElementById('a5').style.display='none';
+															 document.getElementById('a6').style.display='none';
+															 document.getElementById('a7').style.display='none';
+															 document.getElementById('a11').style.display='block';">沒有欸...第一次聽說</button>
+	<!--沒有欸...-->
+	<p id="content2" style="display:none">挖~沒關係，我來帶你認識!</p>
+	<button id="a8"  style="display:none" onclick="display6();document.getElementById('content2').style.display='none';
+															  document.getElementById('a8').style.display='none';
+															  document.getElementById('a12').style.display='block';
+															  document.getElementById('a13').style.display='block';">好哇好哇!</button>
+
+	<!--有啊!我也是粉絲呢!!-->
+	<p id="content3" style="display:none">真的嗎!?那麼來看看我做的網頁吧!</p>
+	<button id="a9" style="display:none" onclick="document.getElementById('content3').style.display='none';
+												  document.getElementById('a9').style.display='none';
+												  document.getElementById('a12').style.display='block';
+												  document.getElementById('a13').style.display='block';">好哇!</button>
+	<!--有聽說過，但是沒有關注-->
+	<p id="content4" style="display:none">哦~那麼我來帶你認識認識吧!入坑不虧!!</p>
+	<button id="a10" style="display:none" onclick="document.getElementById('content4').style.display='none';
+												  document.getElementById('a10').style.display='none';
+												  document.getElementById('a12').style.display='block';
+												  document.getElementById('a13').style.display='block';">好哇!</button>
+	<!--沒有欸...第一次聽說-->
+	<p id="content5" style="display:none">沒關係!我來帶你了解了解</p>
+	<button id="a11" style="display:none" onclick="document.getElementById('content5').style.display='none';
+												  document.getElementById('a11').style.display='none';
+												  document.getElementById('a12').style.display='block';
+												  document.getElementById('a13').style.display='block';">好哇!</button>
+
+
+
+	<p id="a12" style="display:none">那麼要開始囉~</p>
+	<button id="a13" style="display:none" onclick="location.href='file:///C:/Users/user/OneDrive/%E6%96%87%E4%BB%B6/%E8%B7%B3%E8%BD%89.html'">點我跳轉</button>
+	
+
+<script>
+
+	function myFunc(){
+		alert("你好~" + document.getElementById("name").value);
+		let x = document.getElementById("aa");
+			if (x.style.display === "none") {x.style.display = "block";} 
+			else {x.style.display = "none";}
+		let y = document.getElementById("bb");
+			if (y.style.display === "none") {y.style.display = "block";} 
+			else {y.style.display = "none";}
+	}
+
+	function display1(){
+		let x = document.getElementById("content1");
+		let y = document.getElementById("content2");
+		x.style.display ="block";
+		y.style.display ="none";
+	}
+
+	function display2(){
+		let x = document.getElementById("content1");
+		let y = document.getElementById("content2");
+		x.style.display ="none";
+		y.style.display ="block";
+	}
+
+	function display3(){
+		let x = document.getElementById("content3");
+		let y = document.getElementById("content4");
+		let z = document.getElementById("content5");
+		x.style.display ="block";
+		y.style.display ="none";
+		z.style.display ="none";
+	}
+
+	function display4(){
+		let x = document.getElementById("content3");
+		let y = document.getElementById("content4");
+		let z = document.getElementById("content5");
+		x.style.display ="none";
+		y.style.display ="block";
+		z.style.display ="none";
+	}
+
+	function display5(){
+		let x = document.getElementById("content3");
+		let y = document.getElementById("content4");
+		let z = document.getElementById("content5");
+		x.style.display ="none";
+		y.style.display ="none";
+		z.style.display ="block";
+	}
+
+	function display6(){
+
+	}
+	
+
+</script>
+</div>
+</body>
+</html>
